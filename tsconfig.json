@@ -21,14 +21,20 @@
       "$/*": [
         "src/*"
       ],
-      "$types/*": [
-        "src/types/*"
+      "$assets/*": [
+        "src/assets/*"
       ],
       "$components/*": [
         "src/components/*"
       ],
-      "$assets/*": [
-        "src/assets/*"
+      "$router/*": [
+        "src/router/*"
+      ],
+      "$types/*": [
+        "src/types/*"
+      ],
+      "$views/*": [
+        "src/views/*"
       ],
       "$public/*": [
         "public/*"

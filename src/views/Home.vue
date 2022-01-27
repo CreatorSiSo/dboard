@@ -1,16 +1,12 @@
 <template>
-  <header>
-    <nav></nav>
-  </header>
+  <h1>Home</h1>
 </template>
 
 <script lang="ts">
   import { defineComponent } from 'vue';
 
   export default defineComponent({
-    name: 'PageHeader',
-    components: {},
-    props: {},
+    setup() {},
   });
 </script>
 

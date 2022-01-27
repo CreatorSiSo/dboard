@@ -27,9 +27,12 @@ export default defineConfig({
   ],
   resolve: {
     alias: {
-      $types: path.resolve(__dirname, './src/types'),
-      $components: path.resolve(__dirname, './src/components'),
+      $: path.resolve(__dirname, './src'),
       $assets: path.resolve(__dirname, './src/assets'),
+      $components: path.resolve(__dirname, './src/components'),
+      $router: path.resolve(__dirname, './src/router'),
+      $types: path.resolve(__dirname, './src/types'),
+      $views: path.resolve(__dirname, './src/views'),
       $public: '/',
     },
   },
