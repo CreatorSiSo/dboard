@@ -10,7 +10,6 @@
   export default defineComponent({
     name: 'PageNavigation',
     components: {},
-    props: {},
   });
 </script>
 

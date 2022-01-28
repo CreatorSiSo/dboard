@@ -17,6 +17,7 @@ const routes = [
     path: '/actions/:id',
     name: 'ActionDetails',
     component: () => import('$views/actions/ActionDetails.vue'),
+    props: true,
   },
   {
     path: '/devices',
@@ -27,6 +28,7 @@ const routes = [
     path: '/devices/:id',
     name: 'DeviceDetails',
     component: () => import('$views/devices/DeviceDetails.vue'),
+    props: true,
   },
   {
     path: '/settings',
