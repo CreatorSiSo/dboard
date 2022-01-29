@@ -35,11 +35,21 @@ const routes = [
     name: 'Settings',
     component: () => import('$views/Settings.vue'),
   },
+  {
+    path: '/:catchAll(.*)',
+    name: '404',
+    component: () => import('$views/404.vue'),
+  },
 ];
 
 const router = createRouter({
   history: createWebHistory(),
   routes: routes,
+});
+
+router.beforeEach((to, from, next) => {
+  document.title = 'dBoard - ' + to.name?.toString();
+  next();
 });
 
 export default router;
