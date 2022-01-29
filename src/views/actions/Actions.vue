@@ -14,28 +14,19 @@
 
 <script lang="ts">
   import { defineComponent } from 'vue';
+  import { Action } from '$types/types';
 
   export default defineComponent({
     data() {
       return {
-        actions: [
-          {
-            name: 'Toggle Bedroom Lights',
-            id: 6023431,
-            details: 'sdufho ohafp asdfhphp',
-          },
-          {
-            name: 'Toggle Pizza Oven',
-            id: 9453624,
-            details: 'sdufho ohafp asdfhphp',
-          },
-          {
-            name: 'Killswitch House',
-            id: 2384174,
-            details: 'Turns all IoT devices in the house off.',
-          },
-        ],
+        actions: <Action[]>[],
       };
+    },
+    mounted() {
+      fetch(import.meta.env.VITE_API_URL + '/actions')
+        .then((response) => response.json())
+        .then((data) => (this.actions = data))
+        .catch((error) => console.error(error.message));
     },
   });
 </script>
