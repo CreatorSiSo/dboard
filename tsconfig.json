@@ -4,52 +4,29 @@
     "useDefineForClassFields": true,
     "module": "esnext",
     "moduleResolution": "node",
+    "isolatedModules": true,
     "strict": true,
     "jsx": "preserve",
     "sourceMap": true,
     "resolveJsonModule": true,
     "esModuleInterop": true,
+    "paths": {
+      "@/*": [
+        "./src/*"
+      ]
+    },
     "lib": [
       "esnext",
-      "dom"
+      "dom",
+      "dom.iterable",
+      "scripthost"
     ],
-    "baseUrl": ".",
-    "paths": {
-      "*": [
-        "*"
-      ],
-      "$/*": [
-        "src/*"
-      ],
-      "$assets/*": [
-        "src/assets/*"
-      ],
-      "$components/*": [
-        "src/components/*"
-      ],
-      "$router/*": [
-        "src/router/*"
-      ],
-      "$types/*": [
-        "src/types/*"
-      ],
-      "$views/*": [
-        "src/views/*"
-      ],
-      "$public/*": [
-        "public/*"
-      ],
-    }
+    "skipLibCheck": true
   },
   "include": [
-    "src/**/*.ts",
-    "src/**/*.d.ts",
+    "vite.config.*",
+    "env.d.ts",
+    "src/**/*",
     "src/**/*.vue"
-  ],
-  "exclude": [
-    "node_modules",
-    "dist",
-    "public",
-    "src/assets"
   ]
 }

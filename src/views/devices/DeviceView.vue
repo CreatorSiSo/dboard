@@ -1,9 +1,8 @@
 <script setup lang="ts"></script>
 
 <template>
-  <nav>
-    <slot></slot>
-  </nav>
+  <h1>DeviceDetails</h1>
+  <div>device: {{ $route.params.id }}</div>
 </template>
 
 <style></style>

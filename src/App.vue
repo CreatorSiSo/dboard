@@ -1,34 +1,21 @@
+<script setup lang="ts">
+  import { RouterLink, RouterView } from 'vue-router';
+  import PageNavigation from '@/components/PageNavigation.vue';
+</script>
+
 <template>
   <header>
     <PageNavigation>
-      <router-link :to="{ name: 'Home' }">Home</router-link>
-      <router-link :to="{ name: 'Actions' }">Actions</router-link>
-      <router-link :to="{ name: 'Devices' }">Devices</router-link>
-      <router-link :to="{ name: 'Settings' }">Settings</router-link>
+      <RouterLink :to="{ name: 'Home' }">Home</RouterLink>
+      <RouterLink :to="{ name: 'Actions' }">Actions</RouterLink>
+      <RouterLink :to="{ name: 'Devices' }">Devices</RouterLink>
+      <RouterLink :to="{ name: 'Settings' }">Settings</RouterLink>
     </PageNavigation>
   </header>
   <main>
-    <router-view></router-view>
+    <RouterView></RouterView>
   </main>
   <footer></footer>
 </template>
-
-<script lang="ts">
-  import { defineComponent } from 'vue';
-  import PageNavigation from '$components/PageNavigation.vue';
-
-  export default defineComponent({
-    components: {
-      PageNavigation,
-    },
-    setup() {
-      return {};
-    },
-    data() {
-      return {};
-    },
-    methods: {},
-  });
-</script>
 
 <style></style>

@@ -1,9 +1,7 @@
 <script setup lang="ts"></script>
 
 <template>
-  <nav>
-    <slot></slot>
-  </nav>
+  <h1>Home</h1>
 </template>
 
 <style></style>
