@@ -1,5 +1,6 @@
 <script setup lang="ts">
   import { ref, computed } from 'vue';
+  import { RouterLink } from 'vue-router';
   import { Action } from '@/types/types';
 
   const search = ref('');
@@ -12,7 +13,6 @@
 
   const matchingActions = computed(() => {
     const lowerCaseSearch = search.value.toLowerCase().split(' ').join('');
-    console.log(lowerCaseSearch);
 
     return actions.value?.filter((action) => {
       return (
@@ -40,17 +40,14 @@
     placeholder="Search Actions"
     v-model="search"
   />
-  <div>Searching for: {{ search }}</div>
-  <router-link
-    v-for="action in matchingActions"
-    :key="action.id"
-    :to="{ name: 'ActionDetails', params: { id: action.id } }"
-  >
-    <h2>
-      {{ action.name }}
-    </h2>
+  <div v-for="action in matchingActions" :key="action.id">
+    <h2>{{ action.name }}</h2>
     <p>{{ action.details }}</p>
-  </router-link>
+
+    <RouterLink :to="{ name: 'Action', params: { id: action.id } }">
+      Show more
+    </RouterLink>
+  </div>
 </template>
 
 <style></style>

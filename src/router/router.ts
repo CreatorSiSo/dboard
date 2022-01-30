@@ -16,7 +16,7 @@ const router = createRouter({
     },
     {
       path: '/actions/:id',
-      name: 'ActionDetails',
+      name: 'Action',
       component: () => import('@/views/actions/ActionView.vue'),
       props: true,
     },
@@ -27,7 +27,7 @@ const router = createRouter({
     },
     {
       path: '/devices/:id',
-      name: 'DeviceDetails',
+      name: 'Device',
       component: () => import('@/views/devices/DeviceView.vue'),
       props: true,
     },
